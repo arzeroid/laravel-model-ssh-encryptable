@@ -28,7 +28,7 @@ namespace App\Models;
 
 use Arzeroid\LaravelModelEncryptable\SSHEncryptable;
 
-class ActualPersonalCost extends BaseModel
+class UserSalary extends BaseModel
 {
     ...
     use SSHEncryptable;
@@ -42,7 +42,7 @@ class ActualPersonalCost extends BaseModel
      * @var array
      */
     protected $encryptable = [
-        'cost',
+        'payroll',
     ];
 
     ...
