@@ -1,0 +1,31 @@
+{
+    "name": "arzeroid/laravel-model-ssh-encryptable",
+    "description": "A simple trait to encrypt attributes using public key before saving to the database and to decrypt attributes using private key before using their values",
+    "keywords": [
+        "laravel",
+        "eloquent",
+        "database",
+        "encrypt",
+        "decrypt",
+        "model",
+        "ssh"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Puthipong Sthitpattanapongsa",
+            "email": "puthi.sthit@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "phpseclib/phpseclib": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Arzeroid\\LaravelModelEncryptable\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
