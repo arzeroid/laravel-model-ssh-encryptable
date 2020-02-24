@@ -1,4 +1,4 @@
-# Laravel Model Encryptable
+# Laravel Model SSH Encryptable
 
 A simple trait to encrypt attributes using public key before saving to the database and to decrypt attributes using private key before using their values
 
