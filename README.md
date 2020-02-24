@@ -19,7 +19,7 @@ composer require "arzeroid/laravel-model-ssh-encryptable"
 # Usage
 
 1. Add the trait to your model and set your attributes to be encrypted in **encryptable** array
-2. Setup **publicKey** and **privateKey** variables;
+2. Setup **publicKey** and **privateKey** variables
 
 ```php
 <?php
@@ -33,9 +33,6 @@ class UserSalary extends BaseModel
     ...
     use SSHEncryptable;
 
-    protected $publicKey = "this_is_public_key";
-    protected $privateKey = "this_is_private_key";
-
     /**
      * The attributes that should be encrypted.
      *
@@ -45,6 +42,16 @@ class UserSalary extends BaseModel
         'payroll',
     ];
 
+    protected $publicKey;
+    protected $privateKey;
+
+    public function __construct(array $attributes = array())
+    {
+        parent::__construct($attributes);
+
+        $this->publicKey = env('PUBLIC_KEY');
+        $this->privateKey = Cache::get('private_key');
+    }
     ...
 }
 ```
