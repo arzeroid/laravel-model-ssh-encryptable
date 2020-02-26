@@ -61,9 +61,11 @@ trait SSHEncryptable
 
     private function encrypt($value)
     {
-        if (isset($this->publicKey)) {
+
+        $publicKey = env('PUBLIC_KEY');
+        if (isset($publicKey)) {
             $rsa = new RSA();
-            $rsa->loadKey($this->publicKey);
+            $rsa->loadKey($publicKey);
             return $rsa->encrypt($value);
         }
 
@@ -72,9 +74,10 @@ trait SSHEncryptable
 
     private function decrypt($value)
     {
-        if (isset($this->privateKey)) {
+        $privateKey = Cache::get('private_key');
+        if (isset($privateKey)) {
             $rsa = new RSA();
-            $rsa->loadKey($this->privateKey);
+            $rsa->loadKey($privateKey);
             return $rsa->decrypt($value);
         }
 
