@@ -57,14 +57,14 @@ namespace App\Http\Controllers;
 
 use Cache;
 ...
-    
+
 class UserSalaryController extends Controllers
 {
     ...
     public function setKey()
     {
-        ...
         Cache::forever('private_key', 'MIICXQIBAAKBgQDL/6Kf7FxMR68WllFaKMfFLOmScFZFUOvjRaKuVOdOt6t+sqPUxqcXbPakvtqEY/RcavVs7Of8ae3qSIiwxgialtGVfMzTMU39GlmAkKZ97HCvZ+DX0lMHZ0EXghBqnn0gm7+5GsiHJZ/ImFiPJkeA74F/3y6cppkgpIgGQrH5wQIDAQABAoGBAJDEPPgYl/dZ95qj2d+NiRcYJDlTlyVho8SJKkVk4zEtjno+85yPzQwGu5F2D0RcWpErJjfCd27dDYVxK++m2Xr1URVhaG9Y7NRIso2gRayG8AbwIRUu1WrRt6Kyll/Dnveoxbw/WyccmS/CicBG52G+egDubgaTcvFiaRRaABRBAkEA+l+bSevcsDNtsPEBwrdQhzr5wR82JTuGO7/HIb2s0GpPR8KnoLtHChhiBHMxINTCkHwi7AN4iUTfUK4y7d1npQJBANCVPCDKzxXJ1isVGfhBldJvyDB/xPLwkXIf3Hwaig1nSBfUFnJe8dBb2QFcF+QoyFXAvLPZ7ydiAvzpT492Du0CQQCEfzf0xKcDcBPqgYBHBS/OgL1PIC9NQNTmpbTB/FiJ6tiNx0tiWflcNE8av8MN9soIIEly0Ntm+VWcorM9AeApAkBsRkukKiM9iDyouJd2i3Uee/BLXMf75G1b9LYbphsrwgVmeS39yNN1+Xe4gPnV8mWsPhS2t9axduteJi6qpfoxAkBXBkgvBnWFaNs6fZVANE2GKdI9F5pF3Cm2eUy+90pmrwM5o2Jfiy6aRXQ9689XKNV2LSXXuP7yjQFj8mqiCD7q');
-    ...
+        ...
+    }
 }
 ```
